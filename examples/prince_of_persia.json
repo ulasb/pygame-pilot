@@ -1,0 +1,9 @@
+[
+  {"op": "advance", "frames": 2, "shot": "title"},
+  {"op": "advance", "frames": 6, "tap": ["return"]},
+  {"op": "advance", "frames": 100, "shot": "landed"},
+  {"op": "advance", "frames": 90, "down": ["right"], "shot": "running"},
+  {"op": "advance", "frames": 150, "shot": "after_fall"},
+  {"op": "advance", "frames": 1, "up": ["right"]},
+  {"op": "info"}
+]

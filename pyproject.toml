@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygame-pilot"
+version = "0.1.0"
+description = "Drive, frame-step, and observe unmodified pygame apps"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Ulas Bardak"}]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Games/Entertainment",
+]
+
+[project.scripts]
+pilot = "pygamepilot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pygamepilot*"]
