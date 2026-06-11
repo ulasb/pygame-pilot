@@ -36,7 +36,9 @@ def _screenshot(out_dir: str, name: str | None) -> str | None:
         fname += ".png"
     path = os.path.join(out_dir, "frames", fname)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    pygame.image.save(surface, path)
+    # strip any alpha channel: blits leave garbage alpha on surfaces
+    # that inherit an alpha mask from accelerated display formats
+    pygame.image.save(surface.convert(24), path)
     return path
 
 
